@@ -1,3 +1,5 @@
+import "./styles.css";
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -21,7 +23,8 @@ const App: React.FC = () => {
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
       <h1>Security Dashboard</h1>
-      <table border={1} cellPadding={10}>
+      <table className="security-table">
+
         <thead>
           <tr>
             <th>ID</th>
