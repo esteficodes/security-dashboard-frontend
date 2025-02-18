@@ -1,67 +1,98 @@
-/* General Styles */
+/* 🌟 Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 20px;
-    padding: 20px;
-  }
-  
-  /* Centered Heading */
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  /* Table Styling */
-/* Table Styling */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+/* 🎯 Dashboard Title */
+h1 {
+  color: #007bff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 📊 Table Container */
+.security-table-container {
+  width: 100%;
+  overflow-x: auto; /* ✅ Allows scrolling if needed */
+  padding: 10px;
+}
+
+/* 📊 Table Styling */
 .security-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* 🟢 Table Header */
+.security-table th {
+  padding: 12px;
+  text-align: left;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+/* 🔵 Table Rows */
+.security-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+/* 🔄 Alternating Row Colors */
+.security-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.security-table tbody tr:nth-child(odd) {
+  background-color: #e9ecef;
+}
+
+/* 🎯 Hover Effect */
+.security-table tbody tr:hover {
+  background-color: #d1ecf1;
+}
+
+/* 📱 Mobile-Friendly Table - Stack Rows */
+@media screen and (max-width: 768px) {
+  .security-table thead {
+    display: none; /* ✅ Hide the table header */
+  }
+
+  .security-table tbody, .security-table tr, .security-table td {
+    display: block;
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  }
+
+  .security-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    color: black;
+    padding: 10px;
   }
-  
-  .security-table th, .security-table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
+
+  .security-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    font-size: 14px;
+    border-bottom: none;
   }
-  
-  .security-table th {
-    background-color: #007BFF;
-    color: white;
+
+  .security-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #007bff;
   }
-  
-  .security-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .security-table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  
-  /* Table Headers */
-  th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #007BFF;
-    color: white;
-  }
-  
-  /* Alternate Row Colors */
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
- 
-  }
-  
-  tr:hover {
-    background-color: #f1f1f1;
-  }
-  
+}
+
