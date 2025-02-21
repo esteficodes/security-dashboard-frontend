@@ -1,50 +1,65 @@
-# React + TypeScript + Vite
+# 🔒 Security Dashboard  
+A **React + TypeScript + WordPress** application that logs failed login attempts and provides a **secure admin-only dashboard** to monitor security events in real-time.  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🛠 **Built with:**  
+- **React + TypeScript** (for a scalable and type-safe frontend)  
+- **WordPress + PHP** (for backend logging and authentication)  
+- **REST API + Axios** (for secure communication)  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features  
+✅ **Real-time Security Logs** – Tracks failed logins and other security events.  
+✅ **WordPress REST API** – Uses a custom plugin to expose security logs.  
+✅ **Admin-Only Access** – Restricts logs to WordPress administrators.  
+✅ **Responsive UI** – Mobile-friendly design with automatic adjustments.  
+✅ **Secure Authentication** – Uses WordPress authentication with nonces and cookies.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📌 Tech Stack  
+### **Frontend (React + TypeScript)**  
+- ⚡ **Vite** – Fast build tool for modern React apps  
+- 🔄 **Axios** – Handles API requests to WordPress  
+- 🎨 **CSS & Responsive Design** – Ensures mobile-friendly UI  
 
-- Configure the top-level `parserOptions` property like this:
+### **Backend (WordPress + PHP)**  
+- 🔗 **WordPress REST API** – Custom endpoint for fetching logs  
+- 🔌 **Custom Plugin** – Logs failed login attempts in the database  
+- 🛢 **MySQL (via LocalWP)** – Stores security events  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🚀 Setup & Installation  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### **1️⃣ Install LocalWP & Set Up WordPress**  
+1. **Download & Install [LocalWP](https://localwp.com/)**  
+2. **Create a new site** (e.g., `security-dashboard.local`)  
+3. **Enable WordPress REST API:** No extra setup needed!  
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+### **2️⃣ Install the Security Dashboard Plugin**  
+1. **Go to your LocalWP site directory:**  
+   ```sh
+   cd ~/Local Sites/security-dashboard/app/public/wp-content/plugins/
+
+2. **Clone the plugin into `wp-content/plugins/`:**  
+   ```sh
+   git clone https://github.com/yourusername/security-dashboard-plugin.git
+
+## **Activate the Plugin in WordPress Admin:**
+1. Login to **[http://security-dashboard.local/wp-admin/](http://security-dashboard.local/wp-admin/)**
+2. Go to **Plugins** → **Activate "Security Dashboard"**
+3. Activate the Plugin in WordPress Admin:
+Login to http://security-dashboard.local/wp-admin/
+Go to Plugins → Activate "Security Dashboard"
+
+---
+
+## **3️⃣ Install & Run the React Frontend**
+### **Navigate to your frontend directory:**
+```sh
+cd ~/Desktop/CODE/security-dashboard-frontend
+
+
